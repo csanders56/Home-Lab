@@ -1,0 +1,21 @@
+
+Configuring pfSense in VirtualBox is a great way to set up a virtual network for testing or learning purposes. Here are the steps to configure pfSense in VirtualBox:
+
+Step 1: Install VirtualBox The first step is to install VirtualBox on your computer. You can download the latest version from the VirtualBox website.
+
+Step 2: Download the pfSense ISO file Next, you'll need to download the pfSense ISO file from the pfSense website.
+
+Step 3: Create a new virtual machine Open VirtualBox and click on "New" to create a new virtual machine. Give your virtual machine a name and select "BSD" as the type, and "FreeBSD (64-bit)" as the version.
+
+Step 4: Configure the virtual machine settings In the "System" settings. Use at least 8GB for the hard drive and click next. Allocate at least 1024mb for memory size. Then select “create a virtual hard disk now” and click next. After that, select “dynamically allocated”. Once the virtual machine is made click “Settings” for that specific virtual machine.
+
+Step 5: In the network portion of “settings” Use how many networks you want. MAKE SURE TO NAME EACH ADAPTER YOU CAN, TO HELP WITH CONFIGURATION WHEN PFSENSE IS INSTALLED. Always make sure for a home lab to use “1 NAT adapter”. I personally used 1 NAT and 7 Vnets (Virtual networks).
+
+
+Step 6: Start the virtual machine Click "Start" to start the virtual machine. The pfSense installer will boot from the ISO file
+
+Step 7: Install pfSense Follow the pfSense installer prompts to install pfSense on the virtual machine.
+
+Step 8: In the settings of the virtual lab, configure network interfaces. Once pfSense is installed, go to the "Interfaces" tab in pfSense and configure the virtual network interfaces. Make sure to set the WAN interface to use the "NAT" network adapter in VirtualBox, and the LAN interface to use the "Internal Network"(Vnet) adapter. 
+
+Step 9: Configure your firewall rules as needed to allow or block traffic between your virtual network and the outside world. You can access the pfSense web interface from your host machine browser by using the IP address assigned to the LAN interface in step 7.
