@@ -1,0 +1,95 @@
+STEP 1: Download the Windows Server 2022 ISO file from the Microsoft website.
+
+STEP 2: Open VirtualBox and click on "New" to create a new virtual machine.
+
+STEP 3: Name the virtual machine and choose "Microsoft Windows" as the type and "Windows Server 2022 (64-bit)" as the version.
+
+STEP 4: Allocate the amount of memory that you want to assign to the virtual machine. Microsoft recommends at least 2 GB of RAM for Windows Server 2022.
+
+STEP 5: Choose "Create a virtual hard disk now" and click on "Create".
+
+STEP 6: Select "VDI (VirtualBox Disk Image)" as the hard disk file type and click on "Next".
+
+STEP 7: Choose "Dynamically allocated" for the storage on physical hard disk and click on "Next".
+
+STEP 8: Set the maximum size of the virtual hard disk (Try at least 50GB) and click on "Create".
+
+STEP 9: With the virtual machine selected, click on "Settings" and then click on "Storage".
+
+STEP 10: Under "Controller: IDE", click on "Empty" and then click on the "Add" button (+).
+
+STEP 11: Choose the Windows Server 2022 ISO file that you downloaded earlier and click on "Open".
+
+STEP 12: Click "Network" and choose "Internal network". Pick any "Vnet" as an adapter option.
+
+SETP 13: Click on "OK" to close the Settings window.
+
+STEP 14: Start the virtual machine by clicking on the "Start" button in VirtualBox.
+
+STEP 15: Follow the on-screen instructions to install Windows Server 2022 in the virtual machine.
+
+STEP 16: Once the installation is complete, its time to configure to a domain controller.
+
+
+CONFIGURE ACTIVE DIRECTORY
+
+
+Step 1: Promote the server to a domain controller by opening the "Server Manager" and click "Add roles and features." Follow the prompts to install the "Active Directory Domain Services" role. Once installed, promote the server to a domain controller by running the "Active Directory Domain Services Configuration Wizard."
+
+Step 2: Configure Active Directory settings and follow the prompts in the "Active Directory Domain Services Configuration Wizard" to configure your Active Directory settings. Set up a domain name, specify the DNS settings, and set up the administrative password. (LEtsdefend can help you with 
+
+Step 3: Create user accounts and groups after Active Directory is configured, create user accounts and groups for your network. Open the "Active Directory Users and Computers" tool and create users and groups as needed.
+
+Step 4: Configure Group Policy settings Use the "Group Policy Management" tool to configure Group Policy settings for your domain. This allows you to manage settings and preferences for all users and computers on your network.
+
+Step 5: Configure DNS settings Configure the DNS settings for your domain in the "DNS Manager" tool. Set up forward and reverse lookup zones, and create DNS records for your domain controllers and other servers.
+
+
+NETWORKING 
+
+
+Go to "Open Network & Internet Setting"
+
+Change adapter options
+
+Select your card properties
+
+Go to "Internet Protocol Version 4" > Properties
+
+Create an IP or obtain automatically. (remember the gateway IP)
+
+Create a DNS server. "I used "127, 0, 0, 1"
+
+Rename the server with a easy name to remember/use.
+
+Restart your VM
+
+
+
+INSTALLATION OF ACTIVE DIRECTORY
+
+
+STEP 1: Select "Add roles and features" in the Server Manager
+
+STEP 2: Add a role-based installation
+
+STEP 3: Add "Active Directory Domain Services"
+
+STEP 4: Click "Add features".
+
+STEP 5: Next, click "promote this server to a domain controller" 
+
+STEP 6: Add a new forest
+
+STEP 7: In "Deployment Configuration", Create a name
+
+STEP 8: in Domain Controller options, use default configuration and create a password (Make sure Domain Name Server boxed is checked)
+
+STEP 9: Leave the DNS part as is.
+
+STEP 10: Launch the install
+
+STEP 11: Reboot the "VM".
+
+
+
