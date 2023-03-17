@@ -1,0 +1,22 @@
+Log in to the pfSense web interface using your administrator credentials.
+
+Click on "System" in the top menu and then click on "Package Manager".
+
+In the "Available Packages" tab, you will see a list of packages that you can install. Browse through the list or use the search bar to find the package that you want to install.
+
+Once you find the package, click on the "Install" button next to it.
+
+A confirmation dialog will appear. Click on "Confirm" to begin the installation process.
+
+The package will now be downloaded and installed on your pfSense system.
+
+After the installation is complete, you will see the package listed in the "Installed Packages" tab.
+
+Some packages may require additional configuration. Click on the package name to open its configuration page and configure it according to your needs.
+
+Once you have finished configuring the package, click on "Save" to apply the changes.
+
+Note: Before installing any package, make sure that it is compatible with your version of pfSense and that it is from a trusted source. It is also recommended to create a backup of your pfSense configuration before installing any packages
+
+
+(I installed Snort, squid, Nmap)
